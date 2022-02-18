@@ -214,7 +214,7 @@ def find_new_words(text, use_type='file', freq_min=2, len_max=5, entropy_min=2.0
 
 
 if __name__ == '__main__':
-    res = find_new_words(text='nwd/ZX.txt', use_type="file", freq_min=2, len_max=5, entropy_min=2.0, aggregation_min=3.2)
+    res = find_new_words(text='ZX.txt', use_type="file", freq_min=2, len_max=5, entropy_min=2.0, aggregation_min=3.2)
     with open("new_words.txt", "w", encoding="utf-8") as f:
         for new_word in res:
             f.write(new_word + "\n")

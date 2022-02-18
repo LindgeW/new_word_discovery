@@ -113,6 +113,11 @@
 师兄
 ```
 
+### 参考
++ https://github.com/yongzhuo/Macropodus
++ https://github.com/smoothnlp/SmoothNLP
++ https://github.com/zhoujx4/NLP-Series-NewWordsMining-PTMPretraining
+
 ### 挖词框架 (Todo)
 
 <img src='wd.png' />

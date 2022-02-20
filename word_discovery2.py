@@ -209,6 +209,7 @@ def find_new_words(text, use_type='file', freq_min=2, len_max=5, entropy_min=2.0
                              pmi_limit=aggregation_min,
                              entropy_limit=entropy_min)
 
+    new_words = list(filter(lambda x: not re.search("[^\u4e00-\u9fa5]", x), new_words))  # 是否为汉字
     new_words = list(filter(lambda x: not re.search("[了但里的和为是]", x), new_words))
     return new_words
 

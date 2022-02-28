@@ -22,6 +22,16 @@ def cut_sentence(text):
     return sen_cuts
 
 
+def eng_word_tokenize(sent, keep_sep=True):
+    if keep_sep:
+        sep = r"([,.!:;-?()<>{}|\s+])"   # 保留分隔符
+    else:
+        sep = r"[,.!:;-?()<>{}|\s]+"    # 不保留分隔符
+    tokens = re.split(sep, sent.strip())
+    tokens = [t for t in tokens if t != '' and t is not None]
+    return tokens
+
+
 def get_ngrams(text, ns=None, len_max=7):
     """
         获取文本的ngram等特征
